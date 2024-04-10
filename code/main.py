@@ -62,8 +62,8 @@ sender_email = 'YOUR_EMAIL'
 sender_name = 'YOUR_APP_PASSWORD_NAME'
 password = 'YOUR_APP_PASSWORD' # This is the app password not the e-mail password
 recipient_email = 'THE_RECIPIENT_EMAIL'
-subject = 'SUBJECT'
-message = 'MESSAGE'
+subject = 'Home Alarm'
+message = 'Your home alarm has been triggered.\n\nThis is an automatic message. Please, do not respond it.'
 while True:
     distance_cm = hcsr04.distance()
     print(f'Distance: {distance_cm}cm | {distance_cm / 2.54}in')
