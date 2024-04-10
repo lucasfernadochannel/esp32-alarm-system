@@ -67,10 +67,10 @@ message = 'MESSAGE'
 while True:
     distance_cm = hcsr04.distance()
     print(f'Distance: {distance_cm}cm | {distance_cm / 2.54}in')
-    if (distance_cm >= 0 and distance_cm <= 50):
+    if (distance_cm >= 2 and distance_cm <= 50):
         # Play melody
         for note, duration in zip(melody, durations):
-            buzzer = PWM(buzzer_pin, freq=note, duty=512)
+            buzzer = PWM(buzzer_pin, freq = note, duty = 512)
             sleep_ms(duration)
             buzzer.deinit()
             sleep_ms(50)  # Pause between notes
